@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'StoreController@index');
 
 Route::get('home', 'HomeController@index');
 
@@ -40,14 +40,12 @@ Route::group(['prefix'=>'admin','where'=>['id'=>'[0-9]+']],function(){
 	});
 
 	Route::group(['prefix'=>'product','where'=>['id'=>'[0-9]+']],function(){
-
 		Route::get('',['as'=>'product','uses'=>'ProductsController@index']);
 		Route::get('create',['as'=>'product.create','uses'=>'ProductsController@create']);
 		Route::post('',['as'=>'product.store','uses'=>'ProductsController@store']);
 
 		/*Rota das Imagens*/
 		Route::group(['prefix'=>'images'],function(){
-
 			Route::get('{id}/product',['as'=>'product.images','uses'=>'ProductsController@images']);
 			Route::get('create/{id}/product',['as'=>'product.images.create','uses'=>'ProductsController@createImage']);
 			Route::post('store/{id}/product',['as'=>'product.images.store','uses'=>'ProductsController@storeImage']);
