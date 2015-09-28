@@ -44,4 +44,9 @@ class Product extends Model {
 
         return $query->where('recommended','=',1);
     }
+
+    public function scopeOfCategory($query, $type){ // Passando o Of da para passar o type para a função
+
+        return $query->where('category_id','=',$type);
+    }
 }

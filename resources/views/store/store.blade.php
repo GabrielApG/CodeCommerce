@@ -9,12 +9,12 @@
     <title>Home | E-Shop</title>
 
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="{{ asset('/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/animate.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/main.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/responsive.css')}}" rel="stylesheet">
 
 
 </head><!--/head-->
@@ -27,8 +27,8 @@
                 <div class="col-sm-6">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> (19) 5555-5555</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> atendimento@schoolofnet.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> (31) 0800-0000</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> atendimento@atendimento.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/"><span>CodeCommerce</span></a>
+                        <a href="/"><span>Stylus Modas</span></a>
                     </div>
 
                 </div>
@@ -147,11 +147,11 @@
 
 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/main.js"></script>
+<script src="{{ asset('/js/jquery.js')}}"></script>
+<script src="{{ asset('/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{ asset('/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{ asset('/js/main.js')}}"></script>
 
 </body>
 </html>
