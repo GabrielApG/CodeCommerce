@@ -9,7 +9,7 @@
                     <thead>
                     <tr class="cart_menu">
                             <td class="image">Item</td>
-                            <td class="description"></td>
+                            <td class="description">Descrição</td>
                             <td class="price">Valor</td>
                             <td class="qtd">Quantidade</td>
                             <td class="total">Total</td>
