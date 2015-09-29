@@ -31,4 +31,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+
+	//Método criado manual
+	public function orders()
+	{
+		return $this->hasMany('CodeCommerce\Order');
+	}
+
 }

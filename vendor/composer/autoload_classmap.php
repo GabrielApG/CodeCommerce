@@ -9,6 +9,8 @@ return array(
     'AddCategoryProducts' => $baseDir . '/database/migrations/2015_05_18_171933_add_category_products.php',
     'CategoryTableSeeder' => $baseDir . '/database/seeds/CategoryTableSeeder.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2015_05_15_160742_create_categories_table.php',
+    'CreateOrderItemCreate' => $baseDir . '/database/migrations/2015_09_29_014112_create_order_item.php',
+    'CreateOrdersTable' => $baseDir . '/database/migrations/2015_09_29_013001_create_orders_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProductImagesTable' => $baseDir . '/database/migrations/2015_09_23_192535_create_product_images_table.php',
     'CreateProductsTable' => $baseDir . '/database/migrations/2015_05_15_160805_create_products_table.php',

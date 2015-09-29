@@ -11,7 +11,7 @@
             <h2 class="title text-center">Em destaque</h2>
 
             <!-- Exibe a partial product onde listara todos os produtos-->
-            <!-- Isto fala que os product é o pFeatured-->
+            <!-- Isto fala que os product ?o pFeatured-->
             @include('store.partial.product', ['products' => $pFeatured])
 
         </div><!--features_items-->
