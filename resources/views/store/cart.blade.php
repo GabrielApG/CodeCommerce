@@ -9,7 +9,7 @@
                     <thead>
                     <tr class="cart_menu">
                             <td class="image">Item</td>
-                            <td class="description">Descrição</td>
+                            <td class="description">DescriÃ§Ã£o</td>
                             <td class="price">Valor</td>
                             <td class="qtd">Quantidade</td>
                             <td class="total">Total</td>
@@ -38,7 +38,7 @@
                             <td class="cart_total">
                                 <p class="cart_total_price">{{$item['price'] * $item['qtd']}}</p>
                             </td>
-                            <td class="cart_delete">    <!-- o $k é o delete-->
+                            <td class="cart_delete">    <!-- o $k ï¿½ o delete-->
                                 <a href="{{route('cart.destroy', ['id'=>$k])}}" class="cart_quantity_delete">Delete</a>
                             </td>
                         </tr>
