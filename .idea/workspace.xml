@@ -357,7 +357,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443497957668</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pagina de detalhes produtos, navegando entre as categorias, parte de autenticação e carrinho OK">
+      <created>1443497967156</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1443497967156</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
