@@ -4,6 +4,7 @@ namespace CodeCommerce\Http\Controllers;
 use CodeCommerce\Category;
 
 use CodeCommerce\Http\Requests\ProductImageRequest;
+use CodeCommerce\Http\Requests\ProductRequest;
 use Illuminate\Http\Requests;
 use CodeCommerce\Product;
 use CodeCommerce\ProductImage;
@@ -40,6 +41,26 @@ class ProductsController extends Controller {
         $product = $this->productModel->fill($input);
         $product->save();
         return redirect('admin/products');
+    }
+
+    public function destroy($id)
+    {
+        $this->productModel->find($id)->delete();   //Nunca consegue dar o delete direto no id.
+        return redirect()->route('product');// assim funcionária se fosse com com apelido na rota
+        // funcionaria se a rota não tivesse apelido
+    }
+
+    public function edit($id, Category $category)
+    {
+        $produto =  $this->productModel->find($id);
+        $categories = $category->lists('name', 'id');
+        return view('produtos.edit',compact('produto', 'categories'));
+    }
+
+    public function update(ProductRequest $request, $id)
+    {
+        $this->productModel->find($id)->update($request->all());
+        return redirect()->route('product');
     }
 
     public function images($id){

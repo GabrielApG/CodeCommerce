@@ -6,7 +6,7 @@
 
         <a href="{{route('categories.create')}}" class="btn btn-success">Nova Categoria</a>
         <br><br>
-        <table class="table">
+         <table class="table table-striped table-bordered table-hover">
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -19,8 +19,8 @@
                 <td>{{ $category->name }}</td>
                 <td>{{ $category->description }}</td>
                 <td>
-                    <a href="{{ route('categories.destroy',['id'=>$category->id]) }}">Deletar</a> <!-- Observar se a rota esta com apelido -->
-                    <a href="{{ route('categories.edit',['id'=>$category->id]) }}">Edit</a>
+                    <a href="{{ route('categories.destroy',['id'=>$category->id]) }}" class="btn-sm btn-danger">Deletar</a> <!-- Observar se a rota esta com apelido -->
+                    <a href="{{ route('categories.edit',['id'=>$category->id]) }}" class="btn-sm btn-success">Editar</a>
                 </td>
             </tr>
             @endforeach

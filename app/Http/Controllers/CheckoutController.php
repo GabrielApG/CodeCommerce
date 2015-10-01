@@ -18,7 +18,6 @@ class CheckoutController extends Controller {
 	public function place(Order $orderModel, OrderItem $orderItem){ //Método plcae order, quando acessar esse método ele ira acessar o carrinho de comprar e começar a executar
                              //os pedidos
 
-
         if(!Session::has('cart')){
             return false;
         }

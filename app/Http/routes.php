@@ -43,6 +43,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth','where'=>['id'=>'[0-9]+']]
 		Route::get('',['as'=>'product','uses'=>'ProductsController@index']);
 		Route::get('create',['as'=>'product.create','uses'=>'ProductsController@create']);
 		Route::post('',['as'=>'product.store','uses'=>'ProductsController@store']);
+		Route::get('{id}/destroy',['as'=>'product.destroy','uses'=>'ProductsController@destroy']);
+		Route::get('{id}/edit',['as'=>'product.edit','uses'=>'ProductsController@edit']);
+		Route::any('{id}/update',['as'=>'product.update','uses'=>'ProductsController@update']);
 
 		/*Rota das Imagens*/
 		Route::group(['prefix'=>'images'],function(){

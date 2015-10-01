@@ -33,9 +33,9 @@
                 <td>{{ $produto->description}}</td>
                 <td>{{ $produto->category->name }}</td>
                 <td>
-                    <a href="" class="btn-sm btn-success">Editar</a>
+                    <a href="{{route('product.edit',['id'=>$produto->id])}}" class="btn-sm btn-success">Editar</a>
                     <a href="{{route('product.images',['id'=>$produto->id])}}" class="btn-sm btn-info">Images</a>
-                    <a href="" class="btn-sm btn-danger">Remover</a>
+                    <a href="{{route('product.destroy',['id'=>$produto->id])}}" class="btn-sm btn-danger">Remover</a>
 
                 </td>
             </tr>

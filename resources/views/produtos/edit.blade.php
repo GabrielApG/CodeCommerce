@@ -11,22 +11,27 @@
  @endforeach
  </ul>
  @endif
-<!--Form::open(['url'=>"produtos/$produto->id/update", 'method'=>'put']) Nova configuraçaõ de rotas abaixo-->
 
- {!! Form::open(['route'=>['produtos.update', $produto->id], 'method'=>'put']) !!}
+ {!! Form::open(['route'=>['product.update', $produto->id], 'method'=>'put']) !!}
+
+  <div class="form-group">
+    {!! Form::label('category', 'Category:') !!}
+    {!! Form::select('category_id', $categories, $produto->category->id,['class'=>'form-control']) !!}
+   </div>
+
 
  <!-- Nome Form Input -->
 
  <div class="form-group">
 	 {!! Form::label('nome', 'Nome:') !!}
-	 {!! Form::text('nome', $produto->nome, ['class'=>'form-control']) !!}
+	 {!! Form::text('nome', $produto->name, ['class'=>'form-control']) !!}
  </div>
 
  <!-- Descricao Form Input -->
 
  <div class="form-group">
 	 {!! Form::label('descricao', 'Descrição:') !!}
-	 {!! Form::textarea('descricao', $produto->nome, ['class'=>'form-control']) !!}
+	 {!! Form::textarea('descricao', $produto->description, ['class'=>'form-control']) !!}
  </div>
 
  <div class="form-group">
