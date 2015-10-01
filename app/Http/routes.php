@@ -39,7 +39,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth','where'=>['id'=>'[0-9]+']]
 		Route::any('{id}/update',['as'=>'categories.update','uses'=>'CategoriesController@update']);
 	});
 
-	Route::group(['prefix'=>'product','where'=>['id'=>'[0-9]+']],function(){
+	Route::group(['prefix'=>'products','where'=>['id'=>'[0-9]+']],function(){
 		Route::get('',['as'=>'product','uses'=>'ProductsController@index']);
 		Route::get('create',['as'=>'product.create','uses'=>'ProductsController@create']);
 		Route::post('',['as'=>'product.store','uses'=>'ProductsController@store']);
