@@ -35,6 +35,22 @@
              {!! Form::label('description', 'Descrição:') !!}
              {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
          </div>
+         <div class="col-sm-4">
+             <div class="checkbox">
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox" name="featured" id="featured" value="1"> Featured
+                     </label>
+                 </div>
+             </div>
+             <div class="checkbox">
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox" name="recommeded" id="recommeded" value="1"> Recommeded
+                     </label>
+                 </div>
+             </div>
+         </div>
 
 	 <div class="form-group">
 	 {!! Form::submit('Criar Produto', ['class'=>'btn btn-primary']) !!}

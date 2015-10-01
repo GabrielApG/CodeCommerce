@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Session;
 class CheckoutController extends Controller {
 
 
-    public function __construct()
-    {
-        // Obriga o usuário estar logado, para fechar a compra
-        $this->middleware('auth');
-    }
+//    public function __construct()
+//    {
+//        // Obriga o usuário estar logado, para fechar a compra
+//        $this->middleware('auth');
+//    }
 
 	public function place(Order $orderModel, OrderItem $orderItem){ //Método plcae order, quando acessar esse método ele ira acessar o carrinho de comprar e começar a executar
                              //os pedidos

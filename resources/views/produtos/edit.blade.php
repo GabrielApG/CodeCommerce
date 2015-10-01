@@ -34,9 +34,37 @@
 	 {!! Form::textarea('descricao', $produto->description, ['class'=>'form-control']) !!}
  </div>
 
+  <div class="col-sm-4">
+    <div class="checkbox">
+      <div class="checkbox">
+        <label>
+         @if($produto->featured == 1)
+          <input type="checkbox" name="featured" id="featured" value="1" checked> Featured
+         @else
+          <input type="checkbox" name="featured" id="featured" value="1"> Featured
+         @endif
+        </label>
+       </div>
+     </div>
+     <div class="checkbox">
+       <div class="checkbox">
+        <label>
+         @if($produto->recommended == 1)
+          <input type="checkbox" name="recommended" id="recommended" value="1" checked> Recommended
+         @else
+          <input type="checkbox" name="recommended" id="recommended" value="1"> Recommended
+         @endif
+        </label>
+       </div>
+    </div>
+  </div>
+
+
+
  <div class="form-group">
  	{!! Form::submit('Salvar Produto', ['class'=>'btn btn-primary']) !!}
  </div>
+
 
  	{!! Form::close() !!}
 
