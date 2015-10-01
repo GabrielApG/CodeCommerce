@@ -10,21 +10,21 @@ class UserTableSeeder extends Seeder
 
     public function run()
     {
-        DB::table('users')->truncate();
+        //DB::table('users')->truncate();
 
         $faker = Faker::create();
 
-        /*User::create([
+        User::create([
            'name'=>'Gabriel',
             'email'=>'gabrielstigma@yahoo.com.br',
             'password'=>\Illuminate\Support\Facades\Hash::make(123456),
-        ]);*/
+        ]);
 
         foreach(range(1,10) as $i){
             User::create([
                'name'=> $faker->name(),
                 'email'=>$faker->email(),
-                'password' => Hash::make($faker->word)
+                'password' => \Illuminate\Support\Facades\Hash::make($faker->word)
             ]);
         }
     }
