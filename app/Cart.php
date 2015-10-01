@@ -21,9 +21,9 @@
 
      public function add($id, $name, $price)
      {
-        // id do produto   dentro tem a quantidade preço e produto
+        // id do produto   dentro tem a quantidade preï¿½o e produto
          $this->itens += [
-             $id => [   // Se tiver quantidade ele soma,senão tiver quantidade ela será 1
+             $id => [   // Se tiver quantidade ele soma,senï¿½o tiver quantidade ela serï¿½ 1
                  'qtd' => isset($this->itens[$id]['qtd']) ? $this->itens[$id]['qtd']++:1,
                  'price' => $price,
                  'name' => $name
@@ -51,6 +51,12 @@
          }
 
          return $total;
+     }
+
+     public function clear(){
+
+         $this->itens = [];
+
      }
 
 

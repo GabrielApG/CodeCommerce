@@ -1,5 +1,6 @@
 <?php namespace CodeCommerce\Http\Controllers;
 
+use CodeCommerce\Category;
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Order;
 use CodeCommerce\OrderItem;
@@ -11,7 +12,7 @@ class CheckoutController extends Controller {
 
     public function __construct()
     {
-        // Obriga o usuário estar logado
+        // Obriga o usuário estar logado, para fechar a compra
         $this->middleware('auth');
     }
 
@@ -25,7 +26,7 @@ class CheckoutController extends Controller {
         $cart = Session::get('cart');// recupera o carrinho de compras
 
         if($cart->getTotal() > 0){
-
+            //Order retorna um id que será o código da ORDER
             $order = $orderModel->create(['user_id'=>Auth::user()->id,'total'=>$cart->getTotal()]);
 
             /*Método all corresponde ao método da classe Cart*/
@@ -34,9 +35,15 @@ class CheckoutController extends Controller {
 
                 $order->itens()->create(['product_id'=>$k,'price'=>$item['price'], 'qtd'=>$item['qtd']]);
             }
+            // Para limpar o carrinho de compras
+            $cart->clear();
 
-            dd($order);
+            return view('store.checkout', compact('order', 'cart'));
         }
+
+        $categories = Category::all();
+
+        return view('store.checkout', ['cart'=>'empty', 'categories'=>$categories]);
     }
 
 }

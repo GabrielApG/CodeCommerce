@@ -1,4 +1,5 @@
-@extends('app')
+<!-- O templete foi alterado para ser visualizado como templete da Loja o original era chamado de app  -->
+@extends('store.store')
 
 @section('content')
 <div class="container-fluid">
@@ -49,7 +50,9 @@
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">Login</button>
 
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+								<a class="btn btn-link" href="{{ url('/password/email') }}">Esqueceu sua senha</a>
+								<br><br>
+								<a class="btn btn-link" href="{{ url('/auth/register') }}">Criar novo usuário</a>
 							</div>
 						</div>
 					</form>
