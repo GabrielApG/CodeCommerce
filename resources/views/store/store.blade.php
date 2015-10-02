@@ -8,57 +8,52 @@
     <meta name="author" content="">
     <title>Home | E-Shop</title>
 
-
-    <link href="{{ asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/animate.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/main.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/responsive.css')}}" rel="stylesheet">
+    {{--<link href="{{ asset('css/all.css')}}" rel="stylesheet">--}}
+    <link href="{{ elixir('css/all.css')}}" rel="stylesheet">
 
 
 </head><!--/head-->
 
-<body>
-<header id="header"><!--header-->
-    <div class="header_top"><!--header_top-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="contactinfo">
-                        <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> (31) 0800-0000</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> atendimento@atendimento.com</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="social-icons pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--/header_top-->
+   <body>
+   <header id="header"><!--header-->
+       <div class="header_top"><!--header_top-->
+           <div class="container">
+               <div class="row">
+                   <div class="col-sm-6">
+                       <div class="contactinfo">
+                           <ul class="nav nav-pills">
+                               <li><a href="#"><i class="fa fa-phone"></i> (31) 0800-0000</a></li>
+                               <li><a href="#"><i class="fa fa-envelope"></i> atendimento@atendimento.com</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="social-icons pull-right">
+                           <ul class="nav navbar-nav">
+                               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div><!--/header_top-->
 
-    <div class="header-middle"><!--header-middle-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="logo pull-left">
-                        <a href="/"><span>Stylus Modas</span></a>
-                    </div>
+       <div class="header-middle"><!--header-middle-->
+           <div class="container">
+               <div class="row">
+                   <div class="col-sm-4">
+                       <div class="logo pull-left">
+                           <a href="/"><span>Stylus Modas</span></a>
+                       </div>
 
-                </div>
-                <div class="col-sm-8">
-                    <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="{{route('account.orders')}}"><i class="fa fa-user"></i> Minha conta</a></li>
-                            {{--<li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>--}}
+                   </div>
+                   <div class="col-sm-8">
+                       <div class="shop-menu pull-right">
+                           <ul class="nav navbar-nav">
+                               <li><a href="{{route('account.orders')}}"><i class="fa fa-user"></i> Minha conta</a></li>
+                               {{--<li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>--}}
                             <li><a href="{{route('cart')}}"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
 
                             @if(Auth::guest())
@@ -138,9 +133,6 @@
 
 <footer id="footer"><!--Footer-->
 
-
-
-
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
@@ -152,13 +144,7 @@
 
 </footer><!--/Footer-->
 
-
-
-<script src="{{ asset('/js/jquery.js')}}"></script>
-<script src="{{ asset('/js/bootstrap.min.js')}}"></script>
-<script src="{{ asset('/js/jquery.scrollUp.min.js')}}"></script>
-<script src="{{ asset('/js/jquery.prettyPhoto.js')}}"></script>
-<script src="{{ asset('/js/main.js')}}"></script>
+<script src="{{ elixir('js/all.js')}}"></script>
 
 </body>
 </html>

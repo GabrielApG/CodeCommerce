@@ -35,6 +35,7 @@
              {!! Form::label('description', 'Descrição:') !!}
              {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
          </div>
+
          <div class="col-sm-4">
              <div class="checkbox">
                  <div class="checkbox">
@@ -43,6 +44,7 @@
                      </label>
                  </div>
              </div>
+
              <div class="checkbox">
                  <div class="checkbox">
                      <label>

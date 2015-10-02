@@ -39,9 +39,9 @@
       <div class="checkbox">
         <label>
          @if($produto->featured == 1)
-          <input type="checkbox" name="featured" id="featured" value="1" checked> Featured
+            <input type="checkbox" name="featured" id="featured" value="1" checked> Featured
          @else
-          <input type="checkbox" name="featured" id="featured" value="1"> Featured
+            <input type="checkbox" name="featured" id="featured" value="1"> Featured
          @endif
         </label>
        </div>
@@ -50,9 +50,9 @@
        <div class="checkbox">
         <label>
          @if($produto->recommended == 1)
-          <input type="checkbox" name="recommended" id="recommended" value="1" checked> Recommended
+            <input type="checkbox" name="recommended" id="recommended" value="1" checked> Recommended
          @else
-          <input type="checkbox" name="recommended" id="recommended" value="1"> Recommended
+            <input type="checkbox" name="recommended" id="recommended" value="1"> Recommended
          @endif
         </label>
        </div>

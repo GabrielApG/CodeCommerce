@@ -9,7 +9,6 @@ class CheckoutEvent extends Event {
 	use SerializesModels;
 
 	// Neste campo as variaveis para receber os valores
-
 	private $user;
 	private $order;
 
@@ -20,9 +19,11 @@ class CheckoutEvent extends Event {
 
 	}
 
-//	public function __construct()
-//	{
-//
-//	}
+	// Criar um get e um set para ficar certo
+
+	public function getUser(){
+
+		return $this->user;
+	}
 
 }

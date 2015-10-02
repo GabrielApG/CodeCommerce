@@ -19,7 +19,9 @@
 		 	<th>ID</th>
 		 	<th>Nome</th>
 		 	<th>Descricao</th>
-             <th>Category</th>
+            <th>Category</th>
+            <th>Featured</th>
+             <th>Recommended</th>
 		 	<th>Ação</th>
 		 </tr>
 		</thead>
@@ -30,8 +32,22 @@
             <tr>
                 <td>{{ $produto->id }}</td>
                 <td>{{ $produto->name }}</td>
-                <td>{{ $produto->description}}</td>
+                <td width="20">{{ substr($produto->description,0,10 ) }} ...</td>
                 <td>{{ $produto->category->name }}</td>
+                <td>
+                    @if($produto->featured == 1)
+                       {{'Sim'}}
+                    @else
+                        {{'Não'}}
+                    @endif
+                </td>
+                <td>
+                    @if($produto->recommeded == 1)
+                        {{'Sim'}}
+                    @else
+                        {{'Não'}}
+                    @endif
+                </td>
                 <td>
                     <a href="{{route('product.edit',['id'=>$produto->id])}}" class="btn-sm btn-success">Editar</a>
                     <a href="{{route('product.images',['id'=>$produto->id])}}" class="btn-sm btn-info">Images</a>

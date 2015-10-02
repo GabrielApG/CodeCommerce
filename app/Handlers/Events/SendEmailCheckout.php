@@ -17,6 +17,7 @@ class SendEmailCheckout {
 		echo "Evento Disparado";
 
 		// Colocar aqui o processo de Envio de e-mail
+		$user = $event->getUser(); // recuperando o usuario passado para o checkoutEvento
 	}
 
 }

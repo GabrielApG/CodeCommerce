@@ -3,7 +3,7 @@
 return [
 
 	
-
+	//'driver' => env('MAIL_DRIVER', 'log'), // usando o log vai gerar uma das pastas de log um arquivo de log referente ao envio de email
 	'driver' => env('MAIL_DRIVER', 'smtp'),
 
 
@@ -27,6 +27,7 @@ return [
 
 	'sendmail' => '/usr/sbin/sendmail -bs',
 
+	// Ele vai fingir que o email foi enviado
 
 	'pretend' => false,
 

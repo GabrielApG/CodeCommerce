@@ -64,8 +64,6 @@ Route::get('cart',['as'=>'cart','uses'=>'CartController@index']);
 Route::get('cart/add/{id}',['as'=>'cart.add','uses'=>'CartController@add']);
 Route::get('cart/destroy/{id}',['as'=>'cart.destroy','uses'=>'CartController@destroy']);
 
-
-
 // Tem de estar autenticado
 Route::group(['middleware'=>'auth'],function() {
 
@@ -74,4 +72,12 @@ Route::group(['middleware'=>'auth'],function() {
 
 });
 
+
+//Route::get('evento', function(){
+
+	// //Dispara o evento
+	// // \Illuminate\Support\Facades\Event::fire(new \CodeCommerce\Events\CheckoutEvent());
+	// //usando Helpers do Laravel
+	//	event(new \CodeCommerce\Events\CheckoutEvent());
+//});
 
